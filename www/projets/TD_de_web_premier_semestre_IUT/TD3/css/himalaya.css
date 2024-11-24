@@ -1,0 +1,337 @@
+/* IMPORT DE POLICES D'ECRITURES */
+@font-face {
+    /* On donne un nom à la police : */
+    font-family: "jsp_a_qui_elle_sert";
+    /* On indique son emplacement sur le serveur : */
+    src:  url("police/Maven_Pro/MavenPro-VariableFont_wght.ttf");
+}
+@font-face {
+    /* On donne un nom à la police : */
+    font-family: "Titre";
+    /* On indique son emplacement sur le serveur : */
+    src:  url("police/Lobster/Lobster-Regular.ttf");
+}
+@font-face {
+    /* On donne un nom à la police : */
+    font-family: "Cursive_italique";
+    /* On indique son emplacement sur le serveur : */
+    src:  url("police/Caveat/Caveat-VariableFont_wght.ttf");
+}
+
+
+
+/* ----------PARAMETTRES GENERAUX------------ */
+body{
+    min-width: 770px;
+}
+/* Supprimmer, par défaut, toutes les marges (intérieures et exterieurs) */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: serif;
+    /* aligner par défaut tout le texte horizontallement au centre de leur block */
+    text-align: center;
+}
+
+/* DISPOSITION DES DIFFERENTS ELEMENTS */
+body{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "nav    nav"
+                         "main   photo_du_jour"
+                         "main   actualite"
+                         "main   boutique"
+                         "footer footer"
+}
+
+
+
+/******************* LES CONTOURS *********************/
+
+/* retirer le style par défaut des listes */
+li{
+    /* retirer le style de base de la liste càd les points*/
+    list-style: none;
+}
+/* retirer le style par défaut des liens et les mettre en écriture blanche */
+a{
+    /* désouligner le texte */
+    text-decoration: none;
+    /* mettre le texte en blanc */
+    color: white;
+}
+
+
+
+/* ---------------BARRE DE NAVIGATION--------------- */
+
+header{
+    grid-area: nav;
+}
+
+/* BANDE NOIRE */
+nav>ul{
+    /* la définir en boite flexible */
+    display: flex;
+    /* l'afficher avec le fond noire */
+    background: black; 
+}
+
+/* STYLE DU CONTENU DE LA BARRE DE NAVIGATION */
+nav>ul>li{
+    /* retirer le style de base de la liste */
+    list-style: none;
+    /* mettre une petite marge intérieure */
+    padding: 1rem;
+    /* aligner les texte au centre */
+    text-align: center;
+    /* augmenter la taille de la police */
+    font-size: 1.5rem;
+    /* afficher le texte en blanc */
+    color: white;
+    /* équilibrer l'espace occupé (est donc ajusyter la position) de chaques élément de la bande de navigation */
+    flex: 1;
+}
+
+/* AJOUT DES SYMBOLES A GAUCHES DES ELEMENS DE LA BARRE DE NAV */
+nav>ul>li:first-child::before{
+    content: "≡";
+}
+nav>ul>li:nth-child(2)>a{
+    padding-left: 30px;
+    background-image: url(../img/logo_personne_pour_nav.png);
+    background-size: auto 100%;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+nav>ul>li:last-child>a{
+    padding-left: 30px;
+    background-image: url(../img/logo_loupe_pour_nav.png);
+    background-size: auto 100%;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+/* ----------------FOOTER (PIED DE PAGE)---------------- */
+
+/* BANDE NOIRE */
+footer{
+    /* la définir en boite flexible */
+    display: inline-flex;
+    /* l'afficher avec le fond noire */
+    background: black;
+    grid-area: footer;
+}
+
+/* STYLE DU CONTENU DE FOOTER */
+footer>p{
+    /* retirer le style de base de la liste */
+    list-style: none;
+    /* mettre une petite marge intérieure */
+    padding: 1rem;
+    /* aligner les texte au centre */
+    text-align: center;
+    /* augmenter la taille de la police */
+    font-size: 1rem;
+    /* afficher le texte en blanc */
+    color: white;
+    /* équilibrer l'espace occupé (est donc ajusyter la position) de chaques élément de la bande de navigation */
+    flex: 1;
+}
+
+
+
+
+
+/* --------------LES COTES bandes noires-------------------- */
+body{
+    border-left: 2rem solid black;
+    border-right: 2rem solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************** LE CONTENU **********************/
+
+
+
+
+/* -------------LES ASIDES A DROITE----------------- */
+body>aside{
+    /* mettre la couleure de fond des aside */
+    background-color: #192732;
+    /* afficher le texte des aside en blanc */
+    color: white;
+    /* mettre une petite marge intérieure */
+    padding: 2rem;
+    padding-top: 1rem;
+}
+body>aside:last-of-type {
+    grid-area: photo_du_jour;
+    padding-bottom: 1rem;
+}
+figcaption{
+    font-family: "Cursive_italique";
+    font-size: 1.3rem;
+}
+body>aside:first-of-type{
+    grid-area: actualite;
+    /* modiffier la couleure de fond du aside central */
+    background-color: #253C4B;
+}
+body>aside:nth-of-type(2){
+    grid-area: boutique;
+}
+body>aside h2{
+    margin-bottom: 0.5rem;
+}
+body>aside li{
+    margin-top: 1rem;
+}
+img{
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    height: auto;
+}
+
+
+
+
+
+
+/* ------------CONTENU DE LA PAGE PRINCIPALE-----------------*/
+
+
+
+/* ---------IMMAGE DE FOND----------- */
+main{
+    /* Image de fond */
+    background-image: url("../img/fond.jpg");
+    background-size: 100% 100%;
+    grid-area: main;
+}
+
+
+
+/* TITRE */
+/* faire le saut de ligne pour le sous titre */
+h1>strong{
+    display: block;
+    font-family: "Titre";
+    font-size: 4rem;
+}
+
+
+
+
+/* ne pas afficher les sous-tites "Récompenses"  et "Revus de presse" */
+section>h2{
+    display: none;
+}
+
+
+
+/* RECOMPENSES */
+
+/* créer une boite flexible pour mettre les deux récompenses */
+section>ul{
+    display: inline-flex;
+    /* mettre le contenu en ligne */
+    flex-direction: row;
+}
+section div{
+    /* défir la taille des blocks de récompense de sorte à ce qu'il aient la même */
+    height: 5em;
+    /* laisser une petite marge entre eux */
+    margin: 1rem;
+    /* mettre leur contenu dans une boite flexible de sorte à pouvoir ensuite justiffier le texte verticallement */
+    display: inline-flex;
+    /* alligner le contenu en colonnes de sorte à aller à la ligne pour chaue smorceaux de texte */
+    flex-direction: column;
+    /* justiffier le texte verticallement */
+    justify-content: space-around;
+    /* laisser des marges intérieures sur les deux cotés pour ne pas que le texte ne s'empille sur les décoration des feuilles de césar */
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    /* afficher les immages décoratives sur les deux bords en les mettant comme immage de fond du block */
+    background-image: url(../img/feuille_cesar_gauche.svg), url(../img/feuille_cesar_droite.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top;
+    background-size: auto 100%, auto 100%;
+}
+section div>h3{
+    font-family: "Comic Sans", cursive;
+    font-weight: 300;
+}
+/* éclatter le block crée par défaut qui engloble les élément de la liste, afin que le texte soit bien justiffier verticallement */
+section div ul{
+    display: contents;
+}
+
+
+
+/* REVUS DE PRESSE */
+
+main>section:last-child{
+    float: left;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+section>figure{
+    background-color: rgb(0,0,0,0.1);
+    border-left: 2px solid rgb(0,0,0,0.15);
+    border-right: 2px solid rgb(0,0,0,0.15);
+    padding: 1.5rem;
+    margin: 1rem;
+}
+figure>blockquote::before, figure>blockquote::after{
+    content: "\000022";
+}
+figure>figcaption>cite{
+    margin-top: 1rem;
+    float: right;
+    color: rgb(0,0,0,0.7);
+}
+figure>blockquote{
+    font-family: "Cursive_italique";
+    font-size: 1.3rem;
+}
+
+
+
+/* "UN FILM DE ERIC VALLI" */
+
+main{
+    position: relative;
+}
+/* positionner en bas du contenu princilpal */
+h1+p{
+    z-index: 999;
+    width: 100%;
+    padding-bottom: 2rem;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}

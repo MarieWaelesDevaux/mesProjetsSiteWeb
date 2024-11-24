@@ -1,0 +1,51 @@
+html{
+    /* mettre en position relative pour que ce soit le parent de référence pour positionner le pied de page */
+    position: relative;
+    /* ajoutter une marge en bas pour ne pas que le contenu de la page de se superpose au pied de page */
+    padding-bottom: 20vw;
+    min-height: 100vh;
+}
+
+/*----Cadre noir-----*/
+footer{
+    /* sortir du flux principal */
+    position: absolute;
+    /* dimentions */
+    width: 100%;
+    /* marges */
+    margin: 0px;
+    padding: 1vw 4vw;
+    padding-right: 1px;
+    /* positionner tout en bas de la page */
+    bottom: 0;
+    left: 0;
+    /* fond */
+    background-color:rgb(4, 13, 18);
+    /* alignement du contenu */
+    text-align: left;
+}
+/*------"Contactez nous"------*/
+footer h2{
+    font-size: 2vw;
+    color: aliceblue;
+}
+
+footer ul{
+    margin-top: 0;
+}
+
+/*------texte autre que le titre----*/
+footer h3,footer ul,footer ul a{
+    font-size: 1.5vw;
+    color:rgb(218, 192, 163);
+}
+
+/* retirer le soulignement par défaut des liens */
+footer ul a{
+    text-decoration: none;
+}
+
+/* ajuster les marges */
+footer h3{
+    margin-bottom: 0.5vw;
+}

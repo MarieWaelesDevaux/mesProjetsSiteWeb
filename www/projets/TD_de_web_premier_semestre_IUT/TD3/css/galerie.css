@@ -1,0 +1,23 @@
+/* toutes les images */
+img{
+    display: inline-block;
+    margin: 1%;
+    padding: 0%;
+    width: 46%;
+}
+/* premiere image */
+main>img:first-of-type{
+    clip-path: ellipse(30% 50%);
+}
+/* deuxieme immmage */
+main>img:nth-of-type(2){
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+/* troisième immage */
+main>img:nth-of-type(3){
+    clip-path: circle(36%);
+}
+/* quatrième immage */
+main>img:nth-of-type(4){
+    border-radius: 20%;
+}

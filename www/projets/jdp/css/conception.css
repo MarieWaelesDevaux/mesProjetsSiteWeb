@@ -1,0 +1,100 @@
+/*Agrandit le bouton "Conception" dans le nav pour marquer à l'utilisateur sa position*/
+nav li:nth-child(3) h3{
+    font-size: 2.75vw;
+    opacity: 1;
+}
+
+/*Couleur de fond de la page*/
+body{
+    background:rgb(219, 203, 189);
+}
+
+/*titre de la page*/
+header h1{
+    color:rgb(150, 80, 50);/*couleur du titre*/
+    text-align: center;/*centrage du titre*/
+    font-size: 4vw;/*taille du titre*/
+}
+
+/*selecteur pointant vers les sections*/
+main section{
+    width: 80%;/*Taille des sections*/
+    margin: 2vw auto;/*Ajustement de la marge pour centrage*/
+    padding: 2vw 5vw;/*Ajustement de la marge intérieur*/
+    background: linear-gradient(rgb(200, 120, 65), rgb(134, 67, 22));/*couleur de fond des sections (dégradé de beige à marron*/
+    border-radius: 2vw;/*bordure arrondi*/
+    box-shadow: 1vw 0.8vw 0.5vw rgb(44, 11, 11);/*Ajout d'ombres*/
+    transition:box-shadow 0.2s;/*Ajout d'une transition pour une animation plus adoucis lors du clic de la souris*/
+}
+
+main section
+{
+    position:relative;/*permet aux liens de position de fonctionner*/
+}
+
+/*Animation des sections sur l'ombre*/
+main section:hover{
+    box-shadow: 1.2vw 1vw rgb(44, 11, 11);
+}
+
+
+/*Selecteur pointant vers la liste en elle même*/
+main section ul{
+    margin: 0 1vw;/*Marge ajusté*/
+}
+
+/*Selecteur pointant vers éléments de liste */
+main section li{
+    /*Ajustement de la parge*/
+    margin: 0;
+    padding: 0;
+    color: aliceblue;/*Couleur des éléments de liste*/
+}
+
+/*selecteur pointant sur les titres dans les sections*/
+main section h2{
+    margin: 1vw 0;/*Ajustement de marge*/
+    padding: 0;
+    color: aliceblue;/*couleur de titre*/
+    font-size: 3vw;/*taille de titre*/
+}
+
+/*Selecteur pointant vers les seconds titre dans les sections*/
+main section h3{
+    /*Ajustement des marges*/
+    margin: 0.5vw 0;
+    padding: 0;
+    margin-top: 1vw;
+    color:aliceblue;/*couleur des seconds titres*/
+    font-size: 2.5vw;/*Tailles des seconds titres*/
+}
+
+/*Selecteur pointant vers les images dans le sections*/
+main img
+{
+    display: block;/*Arrangement de l'affichage des images sous un format de blocs*/
+    width: 90%;/*Taille de simages*/
+    margin: auto;/*Ajustement des marges pour les images*/
+    border-radius: 1vw;/*Bordure arrondi*/
+    box-shadow: 0.5vw 0.5vw 0.5vw rgb(43, 43, 43);/*Ajout des ombres*/
+}
+
+/*Selecteur pointant vers les paragraphes*/
+main p{
+    /*Ajustement de la parge*/
+    margin: 0;
+    padding: 0.5vw 0;
+    color:rgb(202, 201, 201);/*Couleur des paragraphes*/
+    /*Ajustement de la marge intérieur*/
+    padding-left: 2vw;
+    padding-right:20px;
+    font-size: 20px;/*Taille des paragraphes*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/*Police des paragraphes*/
+}
+
+main div{
+    position: absolute;
+    width: 0;
+    top: -5.5vw;
+    left: 0;
+}

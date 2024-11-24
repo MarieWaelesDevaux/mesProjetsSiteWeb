@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/barre_de_navigation.css" rel="stylesheet" type="text/css" />
+    <link href="css/conception.css" rel="stylesheet" type="text/css" />
+    <link href="css/pied_de_page.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/2883/2883861.png"
+    />
+    <title>JDP, Conception du jeu</title>
+  </head>
+
+  <body>
+    <!-- Barra de navigation -->
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"><img src="img/icon.png" alt="icon" /></a>
+        </li>
+        <li>
+          <a href="comment_jouer/index.html"><h3>Comment Jouer</h3></a>
+          <ul>
+            <li>
+              <a href="comment_jouer/etapes_jouer/etape_jouer_1.html"
+                >Etape 1</a
+              >
+            </li>
+            <li>
+              <a href="comment_jouer/etapes_jouer/etape_jouer_2.html"
+                >Etape 2</a
+              >
+            </li>
+            <li>
+              <a href="comment_jouer/etapes_jouer/etape_jouer_3.html"
+                >Etape 3</a
+              >
+            </li>
+            <li>
+              <a href="comment_jouer/etapes_jouer/etape_jouer_4.html"
+                >Etape 4</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="conception.html"><h3>Conception</h3></a>
+          <ul>
+            <li>
+              <a href="#Les_difficultees_rencontrees"
+                >Les difficultées rencontrées</a
+              >
+            </li>
+            <li>
+              <a href="#Nos_choix_pour_notre_code">Nos choix pour notre code</a>
+            </li>
+            <li>
+              <a href="#Diagramme_de_Gantt">Notre diagrame de Gantt</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="page_de_telechargements.html"><h2>Installer</h2></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Entête -->
+    <header>
+      <h1>Comment avous nous procéder&nbsp;?</h1>
+    </header>
+
+    <!-- Contenu e la page -->
+    <main>
+      <section>
+        <!-- Section pour palier le décalage lié à la barre de navigation (qui est en position fixe) lors des liens du menu déroullant -->
+        <div id="Les_difficultees_rencontrees"></div>
+        <h2>Les difficultés rencontrées&nbsp;:</h2>
+        <ul>
+          <li>
+            <h3>L'affichage ncurses&nbsp;:</h3>
+            <p>
+              La librairie ncurses ne permettant l'affichage que, par caractères
+              ASCII, il est donc difficile de faire une belle présentation
+              originale s'adaptant à la taille de la fenêtre.
+            </p>
+          </li>
+          <li>
+            <h3>L'actualisation de l'affichage des cartes&nbsp;:</h3>
+            <p>
+              Cherchant à optimiser le code, nous avons tout d'abord opter pour
+              un rafraichissement, uniquement, des cartes dont l'affichage est
+              modifié (en écrasant les anciennes cartes).
+            </p>
+            <p>
+              Seulement, il y'avait trop de paramètres à prendre en compte tel
+              que la carte survolée, la ou les cartes retournées s'il y'en a. Il
+              fallait donc faire beaucoup de tests rendant le code non optimisé.
+            </p>
+            <p>
+              Nous avons donc finalement choisis de réafficher l'ensemble du
+              plateau de cartes pour chaques modifications.
+            </p>
+          </li>
+          <li>
+            <h3>Le chronomètre&nbsp;:</h3>
+            <p>
+              En parallèle du déroullement du jeu, la gestion du chronomètre
+              était difficile à gérer.
+            </p>
+            <p>
+              En effet, nous avons tout d'abord décidé de compiler deux
+              programmes en simultanée grâce aux "threads". Cependant, l'un des
+              problèmes rencontrés avec les theads, est que les modifications de
+              l'affichage en "simultané" par différents thread créait de
+              nombreux bugs . Il fallait donc vérouiller l'ensemble des autres
+              threads durant la modification. D'autre part, la synchronisation
+              buggait au bout d'un certain moment de jeu.
+            </p>
+            <p>
+              Bien que nous ayons finis par résoudre tous ces problèmes avec des
+              mutex, nous avons préférés créer une autre version qui n'utilise
+              aucun thread. Pour cette version nous avons donc fait en sorte que
+              la commande de lecture d'une entrée n'attende pas s'il n'y en a
+              aucune dans la mémoire tampon.
+            </p>
+          </li>
+          <li>
+            <h3>Les pseudo&nbsp;:</h3>
+            <p>
+              Le fait d'avoir choisi de faire en sorte que l'utilisateur puisse
+              mettre des espace à causer quelques difficultées et nous a pris du
+              temps. Pour cela nous avons utilisé le séparateur ":".
+            </p>
+          </li>
+          <li>
+            <h3>
+              La touche quitter en mode automatique et pendantles les
+              "pauses"&nbsp;:
+            </h3>
+            <p>
+              Le problème a été le même que pour le chronomètre. En effet, il
+              fallait vérifier que la touche puisse être pressé lors du
+              déroulement du jeu automatique, mais égallement lors des pauses
+              d'affichage (lorsque l'affichage doit être figé pendans 1 à 2
+              secondes).
+            </p>
+            <p>
+              A notter que le même problème s'est pausé pour la touche "C" qui
+              permet la modiffication du thème de couleure.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <!-- Section pour palier le décallage lié à la barre de navigation (qui est en position fixe) lors des liens du menu déroullant -->
+        <div id="Nos_choix_pour_notre_code"></div>
+        <h2>Nos choix pour notre code&nbsp;:</h2>
+        <ul>
+          <li>
+            <h3>L'affichage des cartes&nbsp;:</h3>
+            <p>
+              Nous avons opter pour gérer l'affichage des cartes à la manière de
+              la programmation objet. Nous avons créé des fonctions qui, en
+              prenant en paramètre l'indice de la carte, affiche celle-ci de la
+              manière demandé (de face, de dos, ...).
+            </p>
+            <p>
+              Nous avons procédé ainsi car nous trouvons que cela optimisait
+              grandement notre algorithme. En éffet, une fois créé, ces
+              fonctions nous ont permis de se concentrer sur le déroulement du
+              jeu et de ne plus se préoccuper de l'affichage.
+            </p>
+          </li>
+          <li>
+            <h3>Un affichage épuré&nbsp;:</h3>
+            <p>
+              Entre un affichage simple mais adaptatif et un autre plus poussé
+              mais qui ne s'adapte pas à la taille de la fenêtre, nous avons
+              donc choisi la première option. Nous n'avons donc pas pu faire
+              l'affichage de la valeur des cartes de manière illustré avec un
+              ensemble de caractères ASCII, mais seulement avec un caractère.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <!-- Section pour palier le décallage lié à la barre de navigation (qui est en position fixe) lors des liens du menu déroullant -->
+        <div id="Diagramme_de_Gantt"></div>
+        <h2>Notre diagramme de Gantt&nbsp;:</h2>
+        <a href="img/gantt.png" target="_blank">
+          <img
+            src="img/gantt.png"
+            alt="immage du diagrame de Gantt de notre projet"
+          />
+        </a>
+        <p>cliquez sur l'image pour l'agrandir ↑</p>
+      </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+      <h2>Contactez Nous</h2>
+      <h3>Retrouvez nos mails étudiants</h3>
+      <ul>
+        <li>
+          <a href="mailto:marie.waeles--devaux@etu.univ-cotedazur.fr"
+            >marie.waeles--devaux&#64;etu.univ-cotedazur.fr</a
+          >
+        </li>
+        <li>
+          <a href="mailto:skander.souissi@etu.univ-cotedazur.fr"
+            >skander.souissi&#64;etu.univ-cotedazur.fr</a
+          >
+        </li>
+        <li>
+          <a href="mailto:samuel.roy@etu.univ-cotedazur.fr"
+            >samuel.roy&#64;etu.univ-cotedazur.fr</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

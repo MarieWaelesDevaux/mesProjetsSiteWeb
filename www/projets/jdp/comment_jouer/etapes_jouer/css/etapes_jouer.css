@@ -1,0 +1,151 @@
+/*Agrandit le bouton "comment jouer" dans le nav pour marquer à l'utilisateur sa position*/
+nav li:nth-child(2) h3{
+    font-size: 2.75vw;
+    opacity: 1;
+}
+
+/*Couleur de page*/
+html{
+    background: rgb(79, 114, 102);
+
+}
+
+/*Il s'agit du selecteur permettant la création d'un bloc vert; C'est la ou y'aura le contenu des explications*/
+body{
+    /*taille du bloc*/
+    width: 80%;
+
+    /*marge du contenu intérieur*/
+    padding: 4vw;
+    padding-bottom: 8vw;
+    /*marge extérieur permettant de centrer le bloc*/
+    margin: 2vw auto;
+
+    background-color:rgb(24, 61, 61);/*couleur du bloc*/
+    border-radius: 2vw;/*bordures arrondi*/
+    box-shadow: 1vw 0.5vw 0.5vw rgb(88, 88, 88);/*Ajout d'une ombre*/
+}
+
+/*titre de la page dans le bloc*/
+header h1{
+    /*ajuster les marges*/
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.5vw;
+    /*couleur du titre*/
+    color:aliceblue;
+    font-size: 3vw;/*taille du titre*/
+}
+
+
+/*Changement de couleur aux éléments possédant un lien*/
+main a{
+    color: aliceblue;
+}
+
+
+/*selecteur pointant vers le paragraphes et les éléments de liste*/
+main p,main li{
+    color: rgb(177, 177, 177);/*couleur des éléments selectionnés*/
+    font-size: 1.5vw;/*Leurs tailles*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/*Leurs polices d'écritures*/
+}
+
+/*AJUSTEMENT DES IMMAGES*/
+
+main img
+{
+    width: 100%;/*La taille des images*/
+    border-radius:20px;/*la bordure des images arrondi*/
+    box-shadow: 10px 10px 10px rgb(13, 33, 33);/*Ajouter une ombre pour un effet détaché*/
+}
+main a{
+    display: block;
+    /*Arrangement de la marge*/
+    margin: auto;
+    /*modification de la taille*/
+    width: 80%;
+}
+
+/* immage d'affillées (pour les thèmes de couleures) */
+main li{
+    position: relative;
+}
+main li>a{
+    margin: 2% 10%;
+    margin-bottom: 10%;
+    width: 60%;
+}
+main li>a+a{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 60%;
+}
+
+/* annuler les paramettre des liens destinées au liens des immages */
+p>a{
+    display: inline-block;
+    width: auto;
+}
+
+/*Le bloc "fleche" est une liste expliquant les différentes touches a utiliser pour le jeu. Il se présente sous la forme d'un bloc gris*/
+main #fleches {
+    display: inline-block;/*Ajustement de l'affichage sous la forme de blocs alignés*/
+    /*Ajustement de la marge haute et gauche*/
+    margin: 0.5vw;
+    margin-top: 0;
+    /*Ajustement de la marge intérieur pour ne pas faire coller le texte au bord*/
+    padding: 1vw 3vw;
+    padding-left: 5vw;
+    color: rgb(248, 248, 248);/*couleur du texte*/
+    background-color: rgba(53, 53, 53, 0.623);/*couleur de fond dans le bloc*/
+    /*Police d'écriture*/
+    font-family: "sf mono", monaco, "andale mono", "lucida console", "bitstream vera sans mono", "courier new", Courier, monospace;
+    font-size: 1.25vw;/*taille de texte*/
+    border-radius: 1vw;/*bordures arrondi pour le bloc*/
+    border: double black;/*bordures noirs double*/
+}
+/*Selecteur pointant aux mots italiques dans le bloc "fleche"*/
+main #fleches i{
+    color: aliceblue;/*une couleur qui diffère qui est plus clair par rapport aux autres mots*/
+    font-family: monospace/*une police différente*/
+}
+
+/*selecteur pointant vers les balises id "Defi" proposant*/
+#Defi{
+    color:rgb(218, 192, 163);/*pour ce genre de balise, il s'agit que de la couleur a changer*/
+}
+
+
+/*Il s'agit du selecteur qui pointe vers le bouton qui amène vers les étapes suivantes*/
+#Bouton{
+    /* annuler les paramettre des liens destinées au liens des immages */
+    display: block;
+    width: auto;
+    background-image:url(https://img.freepik.com/free-photo/watercolor-paper-texture_1194-6496.jpg);/*fond pour le bouton*/
+    background-size: 100% 100%;/*ajustement du fond*/
+    border-radius: 1vw;/*bordure arrondi*/
+    padding: 0.5vw 2vw;/*ajustement de la marge du contenu dans le bouton*/
+    float: right;/*positionner le bouton vers la droite*/
+    text-align: center;/*texte centré*/
+    border: 0.4vw double black;/*bordure double noir*/
+    box-shadow: 1vw 1vw 1vw rgb(10, 28, 54);
+}
+
+/*Texte dans le bouton blanc*/
+#Bouton>p{
+    /*ajustement de la marge*/
+    margin: 0;
+    font-family: Times, "Times New Roman", serif;/*Police de texte*/
+    color: rgb(14, 38, 75);/*couleur de texte*/
+    font-size: 1.5vw;/*taille de texte*/
+}
+
+
+/*EXTRAITS DE CODE*/
+pre>code{
+    display: block;
+    background-color: black;
+    margin: 0;
+}

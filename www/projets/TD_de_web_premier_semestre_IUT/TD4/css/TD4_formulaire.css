@@ -1,0 +1,112 @@
+/* FORMULAIRE */
+form{
+    /* modiffier la police */
+    font-family: Arial, sans-serif;
+    /* mettre en gras */
+    font-weight: 600;
+    /* ajoutter une patite marge autours du formulaire */
+    margin: 0.5rem;
+    /* definir le formulaire en boite flexible */
+    display: inline-flex;
+    /* alligné le contenu du formulaire en collonne */
+    flex-direction: column;
+    /* afficher les contours de la boite du formulaire en gris*/
+    border: 1px solid gray;
+    /* arrondire légèrement les coins */
+    border-radius: 1rem;
+    /* pour evitter l'overflo dans les coins (à cause de leur arrondisseument) et aussi faire plus beau ajpoutter une petite marge intérieure */
+    padding: 1rem;
+    /* Définire la largeure de base et minimale du formulaire */
+    min-width: 25rem;
+    max-width: 100%;
+    /* le définir comme élément de parent de référence pour les élément en position apsolu */
+    position: relative;
+    /* ajoutetr une marge en bas pour ne pas que le boutton de validation empiette sur la suite */
+    margin-bottom: 3.5rem;
+}
+/* Elements du formulaire */
+fieldset{
+    /* ajoutter une petite marge au bas de chaques éléments du formulaire */
+    margin-bottom: 0.25rem;
+    /* ne pas afficher (cacher) les boites de chaques éléments du formulaire */
+    border-style: hidden;
+    padding: 0px;
+}
+/* LABELS */
+fieldset>label{
+    /* ajoutter une patite marge entre els labels et leur entrées associées */
+    margin-bottom: 0.3rem;
+    /* pour pouvoir faire un selecteur sur la première lettre */
+    display: block;
+}
+/* Colorer en bleu la premièrel lettre des lablels de chaqeus éléments */
+fieldset>label::first-letter{
+    font-size: 150%;
+    color: #6A99EE;
+}
+/* changer la police des "(*)" pour les champs obligatoires */
+fieldset>label>abbr[title="Champ obligatoire"]{
+    /* laisser un petit espacement à gache */
+    margin-left: 0.5rem;
+    /* mettre le texte en gris */
+    color: #9B9B9B;
+    /* retirer la police de base de l'attribut abbr (por évitter que les points ne s'affichent */
+    text-decoration: none;
+}
+/* ENTREES */
+/* style des entrées */
+fieldset>input,fieldset>textarea{
+    /* Aarrondire légèrment les blocks */
+    border-radius: 0.5rem;
+    /* mettre le fond des boites d'entrées en gris */
+    background-color: #D3D3D3;
+    /* mettre les bordure en gris foncé puis effacer les bordures du bas et de droite */
+    border: 2px solid grey;
+    border-right: hidden;
+    border-bottom: hidden;
+    /* ajuster la taille du block à l'espace disponible (càd l'espace du block parent) */
+    width: 100%;
+}
+/* Curseur */
+fieldset>input[type="range"]{
+    /* definir le block du curseur en inline (de sorte à ce qu'il s'ajuste à la bonne taille) */
+    display: inline-block;
+    /* diminuer la lageure du curseur de sorte à ce que les caractères - et + se positionnent aux extrémitées du curseur */
+    width: calc(100% - 2rem);
+    /* ajoutter des petites marges sur les cotées pour avoir un petite espace avec les carractères - et + */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+/* BOUTTON de validation */
+/* positionner le bouton */
+form>fieldset:last-child{
+    /* sortir le boutton du flux principal (le parent (en position relative est le formulaire) */
+    position: absolute;
+    /* positionner l'éllément juste en dessous du formulaire (= du parent) */
+    top: 100%;
+    /* ajoutetr une petite marge suppérieure au boutton */
+    margin-top: 1rem;
+    /* le positionner horizontallement comme le formulaire (= le parent) */
+    left: 0px;
+    /* mettr la laregeure de l'élement de la même taille que la largeure du formulaire (= du parent) */
+    width: 100%;
+    /* centrer horizonbtallement le contenu */
+    text-align: center;
+}
+/* style du boutton de validation*/
+fieldset>button{
+    /* mettre le fond en bleu */
+    background-color: #6495ED;
+    /* afficher le texte en blanc */
+    color: white;
+    /* ne pas mettre (retirrer) en gras le texte */
+    font-weight: 100;
+    /* supprimer les bordures */
+    border: none;
+    /* arrondire les angles */
+    border-radius: 1rem;
+    /* laisser une petite marge interrieur pour faire plus beau mais égallement pour évitter l'overflow lié à l'arrondissement des angles */
+    padding: 0.5rem;
+    /* ajoutter une petite ombre au boutton */
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.5);
+}

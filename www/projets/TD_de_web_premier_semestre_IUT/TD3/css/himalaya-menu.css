@@ -1,0 +1,32 @@
+/* faire disparaitre la PETITE CASE A COCHER */
+#menu{
+    display: none;
+}
+
+/* MENU DEROULLANT */
+
+/* faire disparaitre lorsque le Menu dans la barre de navigation n'a pas été cliqué */
+#menu+label+ul{
+    display: none;
+}
+
+/* STYLE du block du menu déroullant */
+body{
+    position: relative;
+}
+#menu:checked+label+ul{
+    display: flex;
+    height: calc(100% - 6.5rem);
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    z-index: 9999;
+    flex-direction: column;
+    background-color: black;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+/* marges entre les différents élément du menu déroullant */
+#menu+label+ul>li{
+    padding: 1rem;
+}

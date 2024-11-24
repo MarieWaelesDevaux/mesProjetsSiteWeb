@@ -1,0 +1,121 @@
+
+/* LIENS retirer le style par défaut */
+nav a{
+    text-decoration: none;
+    color: black;
+    /* ne pas autoriser les retours à la ligne apres les espaces */
+    white-space: nowrap;
+}
+
+
+
+
+/* ---------BARE PRINCIPALE DE NAVIGATION--------- */
+
+/* POSITIONNEMENT DE LA BARRE DE NAVIGATION */
+nav{
+    display: block;
+    /* afficher la bordure haute en ligne pleine */
+    border-top: 5px solid;
+    /* On veut mettre un cadre coloré au titre. */
+    border-color:  blue;
+    /* 80% de la largeur de la page*/
+    width: 80%;
+    /* largeure minimale et maximale*/
+    min-width: 500px;
+    max-width: 1000px;
+    /* équilibre les marges de chaques cotées */
+    margin-left: auto;
+    margin-right: auto;
+    /* marge minimasle de gauche et de droite de 20 pixels */
+    max-width: calc(100% - 40px);
+    /* On centre le texte dans le cadre. */
+    text-align: right;
+    padding: 0px;
+}
+/* RETIRER LE STYLE DE BASE DES LISTES pour aligner les blocs cote à cotes */
+nav>ul>li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+/* retirer la marge au dessus des blocks de la (qui crés un espace avec la bordure haute bleu du nav */
+nav>ul{
+    margin: 0px;
+}
+
+
+/* STILE DES 4 BLOCKS PRINCIPAUX */
+nav>ul>li>a{
+    display: inline-block;
+    /* agenter la taille du texte */
+    font-size: 150%;
+    /* arondir les coins bas */
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 30%;
+    /* mettre un fond bleu mi-clairs */
+    background:rgb(102, 178, 255);
+    /* mettre une petite marge intérieure */
+    padding: 0.5rem;
+    margin: 0px;
+}
+nav>ul>li:last-child>a{
+    /* mettre un fonf orange */
+    background:orange;
+}
+/* au survol */
+nav>ul>li:hover>a{
+    /* mettre un fonf  bleu vif */
+    background-color: blue;
+    border-radius: 0px;
+}
+nav>ul>li:last-child:hover>a{
+    /* mettre un fonf orange foncé */
+    background:rgb(255, 98, 0);
+}
+
+
+
+
+
+/* ---------MENU DEROULLANT--------- */
+/* STYLE DU BLOCK QUI APPARAIT au survol des blocks principaux de la barre de navigation */
+.infobulle+ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    padding: 1%;
+    list-style: none;
+    background-color: blue;
+    /* arondir les coins bas  et droits seulement */
+    border-radius: 6%;
+    border-top-left-radius: 0%;
+    margin: 0px;
+    padding: 0.5rem;
+}
+li:last-child>.infobulle+ul{
+    /* mettre un fonf orange foncé */
+    background:rgb(255, 98, 0);
+}
+/* le faire apparaitre quand il faut */
+.infobulle:hover+ul,.infobulle+ul:hover{
+    display: inline;
+}
+
+/* STYLES DES LIENS */
+nav>ul>li:hover a{
+    /* colorer l'écriture en blanc */
+    color: white;
+}
+/* au survol */
+nav>ul>li>ul>li:hover a{
+    /* colorer l'écriture en blanc */
+    color: rgb(102, 178, 255);
+}
+nav>ul>li:last-child>ul>li:hover a{
+    /* colorer l'écriture en blanc */
+    color: orange;
+}

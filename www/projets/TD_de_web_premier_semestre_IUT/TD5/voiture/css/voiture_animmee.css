@@ -1,0 +1,106 @@
+/**************FOND*************/
+
+body{
+    margin: 0;
+}
+/* -------CIEL et ROUTE-------- */
+main{
+    height: 22vw;
+    background: linear-gradient(rgb(225,232,242), rgb(225,232,242) 66%, rgb(128,128,128) 66%, rgb(128,128,128));
+}
+/* -------BANDE BLANCHE DE LA ROUTE----- */
+footer{
+    position: relative;
+    top: -3vw;
+    left: 0;
+    height: 0.5vw;
+    background: linear-gradient(90deg, transparent, transparent 50%, white 51%, white);
+    background-size: 6.25% 100%;
+}
+
+
+
+
+/*************VOITURE***************/
+
+@keyframes voiture_avance{
+    to {
+        transform: translate(130vw, 0);
+    }
+}
+
+#voiture{
+    position: absolute;
+    top: 2.5vw;
+    left: -30vw;
+    animation-name: voiture_avance;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* ---------HAUT---------- */
+/* CAPOT et VITTRES */
+#haut{
+    width: 20vw;
+    height: 5vw;
+    margin-left: 2.5vw;
+    border: 0.4vw solid rgb(242,6,6);
+    border-right: none;
+    background: linear-gradient(135deg, rgb(0,0,130), rgb(0,0,4));
+    border-top-left-radius: 2.5vw;
+    border-top-right-radius: 2.5vw;
+    transform: skew(8deg, 0);
+    display: flex;
+}
+/* SEPARATION DES VITRES*/
+#haut>div{
+    margin: 0 4.5vw;
+    width: 1vw;
+    height: 5vw;
+    background-color: rgb(242,6,6);
+}
+
+/* ---------BAS---------- */
+#bas{
+    width: 30vw;
+    height: 6vw;
+    margin-left: 0;
+    background: linear-gradient(rgb(242,6,6), rgb(176,49,49) 15%, rgb(255,246,202) 26%, rgb(255,210,15) 30%, rgb(242,6,6) 38%, rgb(176,49,49));
+    border-radius: 0.5vw;
+    border-bottom-right-radius: 1vw;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 4vw;
+}
+
+/* ---------ROUES---------- */
+@keyframes roue_tourne{
+    to {
+        transform: rotate(360deg);
+    }
+}
+#voiture{
+    position: relative;
+}
+.roue{
+    position: absolute;
+    top: 80%;
+    padding: 0.625vw 1.1vw;
+    border-radius: 50%;
+    background-color: rgb(240,155,0);
+    border: 0.9vw solid black;
+    font-size: 2vw;
+    font-weight: 400;
+    animation-name: roue_tourne;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#r1{
+    margin-left: 3vw;
+}
+#r2{
+    margin-left: 20vw;
+}
+
+

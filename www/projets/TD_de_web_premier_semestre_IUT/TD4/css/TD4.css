@@ -1,0 +1,33 @@
+/* STYLE ES VIDEOS */
+video{
+    display: block;
+    margin: auto;
+    /* definir sa lergeure à 80% (ici de la largeure du contenu main) */
+    width: 80%;
+    /* ajoutter une marge à gauche (de 10% puisque la largeure de la vidéo est de 80% de sorte à ce que celle ci soit centrée) */
+}
+
+
+
+/* STYLE DE L'IMMAGE DE LA DERNIERE SECTION */
+section:last-of-type{
+    overflow-x: auto;
+}
+section:last-of-type>img{
+    /* afficher une toute petite bordure */
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    /* arondir les angles */
+    border-radius: 3rem;
+
+
+    /*
+    width: 80%;
+    display: block;
+    margin: auto;
+    */
+    transform: scale(0.6);
+
+
+    /* ajoutter une ombre noire */
+    box-shadow: 10px 10px 15px rgb(0, 0, 0, 0.5);
+}

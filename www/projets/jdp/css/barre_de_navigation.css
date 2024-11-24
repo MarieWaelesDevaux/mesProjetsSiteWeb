@@ -1,0 +1,167 @@
+/* Décaler le début du reste du body en dessous de la barre de navigation pour que le nav ne se superpose pas à la suite */
+html{
+    margin: 0;
+    padding-top: 5.5vw;
+}
+body{
+    margin: 0;
+}
+
+* {
+    /* inclure les bordure dans la taille des elements */
+    box-sizing: border-box;
+}
+
+/*-----------BARRE DE NAVIGATION-----------*/
+
+nav>ul{
+    /* supprimer les marges exterieures */
+    margin: 0px;
+    /* ajouter une légère marge interieur */
+    padding: 0.5vw;
+    /* former une boite flexible de sorte à pouvoir répartir équitablement l'espace pour chaques élément de la barre de navigation */
+    display: flex;
+    /* allonger sur toute la longueure de la fenetre */
+    width: 100vw;
+    /* la positionner en position fixe (qui ne bouge pas même quand on descend dans la page) */
+    position: fixed;
+    /* la positionner tout en haut de la page qui démarre à sa gauche */
+    top: 0px;
+    left: 0px;
+    /* colorer le fond de la barre de navigation en noir */
+    background-color:rgb(4, 13, 18);
+    /* ajouter une légère ombre visible en dessous de la barre */
+    box-shadow: 0 1vw 5vw black;
+    z-index: 1;
+}
+
+/* chaque élément de la barre de navigation */
+nav>ul>li{
+    /* ajuster leur block à leur taille */
+    display: inline-block;
+    /* elever le style par défaut des liste (notaement les points) */
+    list-style: none;
+    /* répartir équitablement l'espace de touts les éléments de la barre de navigation */
+    flex: 1;
+    /* modifier la police*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* aligner le texte au milieu du block horizontalement */
+    text-align: center;
+    /* mettre en position relative pour que ce soit le parent de référence pour le positionnement du menu déroulant par la suite */
+    position: relative;
+}
+
+nav a{
+    /* enlever le style par défaut des liens */
+    text-decoration: none;
+}
+/*---icone "Jeux des paires" de gauche----*/
+nav img{
+    /*taille de l'image*/
+    width: 10vw;
+    /* la rendre semi-opaque */
+    opacity: 0.5;
+    /*ajout d'une transition pour de l'animation*/
+    transition:opacity 0.2s;
+}
+/* la rendre totalement opaque lorsqu'elle est survolée */
+nav img:hover{
+    opacity: 1;
+}
+
+/*------Liens "CommentJouer" et "Conception"------*/
+nav h3{
+    /* supprimer les marges exterieure puis en mettre une au dessus */
+    margin: 0px;
+    margin-top: 0.75vw;
+    /* coleure du texte */
+    color:rgb(218, 192, 163);
+    /* taille du texte */
+    font-size: 2vw;
+    /* rendre le texte semi-opaque*/
+    opacity: 0.75;
+    /*ajout d'une transition pour de l'animation*/
+    transition:opacity 0.2s, font-size 0.2s;
+}
+/* les agrandir légèrement et les rendre totallement opaquues lorsqu'ils sont survolés */
+nav>ul>li:hover h3{
+    font-size: 2.75vw;
+    opacity: 1;
+}
+/* MENU DEROULLANT */
+nav>ul>li>ul{
+    /* ne pas le faire apparaitre et faire comme si il n'existait pas */
+    display: none;
+    /* le sortir du flux principal */
+    position: absolute;
+    /* positionner en dessous de la partie du menu concerné */
+    top: 100%;
+    left: 0px;
+    /* mettre un fond dégradé */
+    background: linear-gradient(rgb(4, 13, 18), rgb(4, 13, 18)10%, rgb(45, 45, 45));
+    /* ajoutter une légère ombre */
+    box-shadow: 0 1vw 5vw black;
+    /* aligner le texte à gauche */
+    text-align: left;
+    /* taille de la police */
+    font-size: 1.4vw;
+    /* couteure du texte */
+    color: rgb(218, 192, 163);
+    /* arondir les angles du bas */
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    /* dimentions */
+    width: 100%;
+    /* marges intérrieures */
+    padding: 1vw;
+    padding-left: 4vw;
+    padding-top: 0;
+}
+/* retirer la couleur par défaut des liens */
+nav>ul>li>ul a{
+    color: rgb(218, 192, 163);
+    /*ajout d'une transition pour de l'animation*/
+    transition:font-size 0.2s;
+}
+/* au survol des sous menus */
+nav>ul>li>ul a:hover{
+    font-size: 1.6vw;
+}
+/* afficher le menu déroulant au survol du menu concerné de la barre */
+nav>ul>li:hover>ul{
+    display: inline-block;
+}
+
+/*-------Bouton "Intaller" (tout à droite)------*/
+nav li:nth-child(4) h2{
+    /* supprimer les marges exterieure puis en mettre une au desus */
+    margin: 0px;
+    margin-top: 0.5vw;
+    /* ajoutter une légère marge intérrieure */
+    padding: 0.5vw;
+    /* ajuster la taille de la box à la taille du texte */
+    display: inline-block;
+    /* taille de la police d'écriture */
+    font-size: 1.5vw;
+    /* couleure du texte */
+    color: black;
+    /*couleur de fond*/
+    background-color: aliceblue;
+    /* arrondire les angles */
+    border-radius: 6vw;
+    /* ajoutter une ombre blanche légèrement décalée en bas à droite */ 
+    box-shadow: 0.2vw 0.2vw 0.5vw rgba(240, 248, 255, 0.666);
+    /* ajoutetr une très légère bordure pour détourer un peu mieux le boutton */
+    border: 0.1vw solid rgba(0, 0, 0, 0.7);
+    /*ajout d'une transition pour de l'animation*/
+    transition:margin-top 0.2s, margin-left 0.2s, box-shadow 0.2s;
+}
+/* au survol (donner un éffet de boutton presser)*/
+
+nav li:nth-child(4) h2:hover{
+    /* décaller la boxe à l'emplacement de l'ancienne ombre*/
+    margin-top: 0.7vw;
+    margin-left: 0.2vw;
+    /* créer la nouvelle ombre à l'emplacement actuel */
+    box-shadow: 0vw 0vw 0.5vw rgba(240, 248, 255, 0.666);
+}

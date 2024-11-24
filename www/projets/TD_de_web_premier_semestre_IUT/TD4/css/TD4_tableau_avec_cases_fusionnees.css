@@ -1,0 +1,60 @@
+#fusion{
+    margin: 0;
+    padding: 0;
+}
+
+/* STYLE DU TABLEAU (du tableau avec les cases fusionnées) */
+#fusion table{
+    /* centrer horizontallement le contenu */
+    text-align: center;
+    /* fusionner les bordures du tableau */
+    border-collapse: collapse;
+    margin: auto;
+}
+
+/* DIMENTION DES CELLULES BASIQUES (non fusionnée) */
+#fusion td{
+    /* largeure (minimale d'une cellule) */
+    width: 100px;
+    /* hauteur (minimale d'une cellule) */
+    height: 50px;
+}
+#fusion tr{
+    /* hauteur (minimale d'une ligne) */
+    height: 50px;
+}
+
+
+/* COULEURES DE CHAQUES CELLULES */
+#fusion .bleu{
+    background-color: blue;
+    width: 300px;
+    color: white;
+}
+#fusion .rouge{
+    background-color: red;
+    height: 200px;
+}
+#fusion .rose{
+    background-color: pink;
+    width: 200px;
+    height: 100px;
+}
+#fusion .vert{
+    background-color: green;
+}
+#fusion .jaune{
+    background-color: yellow;
+}
+#fusion .orange{
+    background-color: orange;
+    height: 100px;
+}
+#fusion .gris{
+    background-color: gray;
+    width: 200px;
+    height: 100px;
+}
+#fusion .violet{
+    background-color: purple;
+}

@@ -1,0 +1,182 @@
+/*---------------------------------------------FOND (arrière plan)---------------------------------------------*/
+body{
+    background-image: url("../img/background.jpg");
+    text-align: center;
+}
+
+/* retirer le soulignage par défaut des liens */
+a{
+    color:rgba(0,0,0,0);
+    text-decoration: none;
+}
+
+
+
+
+
+/*---------------------------------------------HEADER---------------------------------------------*/
+
+/* boite de l'entête */
+header{
+    /* ajouter une grande marge tout autour du titre principal */
+    margin: 10vw;
+
+    /* faire en sorte que la taille du block s'adapte à son contenu */
+    display: inline-block;
+    
+    /* center le contenu et laisser une petite marge intérrieure */
+    text-align: center;
+    padding: 1vw 4vw;
+
+    /* image de fond */ 
+    background-image:url(https://img.freepik.com/free-photo/watercolor-paper-texture_1194-6496.jpg);
+    background-size: 369px;
+
+    /* format de la bordure et de l'ombrage */
+    border-radius: 2vw;
+    border: 8px double black;
+    box-shadow: 1vw 1vw 5vw black;   
+}
+/* titre principal */
+header>h1{
+    /* marges */
+    margin: 1vw;
+    padding: 0px;
+
+    /*format de texte*/
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(70, 69, 69);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* boutton d'installation */
+header a{
+    /* faire en sorte que la taille du block s'adapte à son contenu */
+    display: inline-block;
+
+    /* marges */
+    padding: 0.5vw 3vw;
+    margin-bottom: 0.2vw;
+    
+    /*format de texte*/
+    color:rgb(218, 192, 163);
+    font-size: 1.75vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    /*couleur de fond*/
+    background-color:rgb(39, 39, 39);
+
+    /*format de la bordure et de l'ombrage*/
+    border-radius: 0.75vw;
+    box-shadow: 0.5vw 0.5vw 1vw black;
+    /*ajout de la transition pour une part d'animation*/
+    transition:margin-bottom 0.2s,margin-top 0.2s,margin-left 0.2s,box-shadow 0.2s;
+    
+}
+/* au survol (simuler un enfoncement du bouton */
+header a:hover{
+    margin-bottom: 0vw;
+    margin-top: 0.2vw;
+    margin-left: 0.2vw;
+    box-shadow: 0.3vw 0.3vw 1vw black;
+}
+
+
+
+
+
+
+/*---------------------------------------------MAIN---------------------------------------------*/
+
+
+/*-------------------Block verte-------------------*/
+main a{
+    /* faire en sorte que la taille du block s'adapte à son contenu */
+    display: inline-block;
+
+    /* dimentions */
+    width: 65%;
+
+    /* marges */
+    margin: 2vw;
+    padding: 4% 8%;
+    padding-top: 6%;
+    padding-right: 26%;
+
+    /* couleur de fond et opacité du carré */
+    background-color: rgb(20, 60, 60);
+
+    /*bordure et ombrage du carré*/
+    border-radius: 3vw;
+    box-shadow: 0.7vw 0.7vw 0.2vw rgba(0, 0, 0, 0.2);
+
+    /* mettre en position relative de sorte à ce que se soit le parent de référence pour pausitionner l'immages décoratives (les cartes)*/
+    position: relative;
+
+    /*ajout de la transition pour une part d'animation*/
+    transition: box-shadow 0.2s, background-color 0.2s;
+}
+/* au survol */
+main a:hover{
+    box-shadow: 1.5vw 1.5vw rgba(0, 0, 0, 0.2);
+    background-color:rgb(30, 80, 80);
+
+}
+
+/* titre */
+main a h2{    
+    /* format de texte */
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3vw;
+}
+/* texte */
+main a p{
+    /* format de texte */
+    color:rgb(163, 163, 163);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8vw;
+}
+
+/* immage décorative */
+main a img{
+    /* dimentions */
+    width: 50%;
+
+    /* positionnement */
+    /* sortir du flux principal et positionner par rapport au block vert*/
+    position: absolute;
+    top: -10%;
+    right: -10%;
+}
+
+/*-------------------Block orange (modification pas rapport au block vert)-------------------*/
+main #bouton2{
+    /* marges */
+    padding-right: 4%;
+    padding-left: 26%;
+
+    /*couleur de fond et opacité du carré*/
+    background-color: rgb(120, 60, 30);
+    
+    /* mettre en position relative de sorte à ce que se soit le parent de référence pour pausitionner l'immages décoratives (la sorte de robot)*/
+    position: relative;
+}
+/* au survol */
+main #bouton2:hover{
+    box-shadow: 1.5vw 1.5vw rgba(0, 0, 0, 0.2);
+    background-color: rgb(140, 70, 40);
+}
+
+main #bouton2 img{
+    /* dimentions */
+    width: 40%;
+    height: 90%;
+
+    /* faire pivotter légèrement l'immage */
+    transform: rotate(-10deg);
+    
+    /* positionner par rapport au block orange */
+    top: -10%;
+    left: -10%;
+}

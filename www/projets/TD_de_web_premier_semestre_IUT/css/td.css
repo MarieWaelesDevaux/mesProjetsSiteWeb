@@ -1,0 +1,167 @@
+* {
+    /* inclur les bordures dans la largeure et ka hauteure totale des éléments */
+    box-sizing: border-box;
+    /* marges au dessus de chaques lignes */
+    margin-top: 0.25rem;
+    /* marge en dessous de chaques lignes */
+    margin-bottom: 0.5rem;
+}
+
+/* FOND A RAILLURES */
+body{
+    /* mettre une couleur unie en fond */
+    background-color: rgb(150, 255, 255);
+    /* faire une ligne oblique cnetrée avec deux demis bouts de lignes obliques dans les coins de la fenetre */
+    background-image: linear-gradient(45deg, rgb(200, 255, 255), rgb(200, 255, 255) 12%, transparent 13%, transparent 37%, rgb(200, 255, 255) 38%, rgb(200, 255, 255) 62%, transparent 63%, transparent 87%, rgb(200, 255, 255) 88%, rgb(200, 255, 255));
+    /* reppeter le motif en taille réduide */
+    background-size: 4rem 4rem, 4rem 4rem;
+}
+
+/* BANDE CENTRALE BLANCHE POUR METTRE LE CONTENU */
+main { 
+    /* 80% de la largeur de la page */
+    width: 80%;
+    /* équilibre les marges de chaques cotées */
+    margin-left: auto;
+    margin-right: auto;
+    /* largeure minimale et maximale*/
+    min-width: 500px;
+    max-width: 1000px;
+    /* ajoutter une légère marge intérrieure */
+    padding: 2%;
+    /* mettre un fond blanc */
+    background-color: rgb(255, 255, 255);
+}
+
+/* LES TITRES ET SOUS-TITRES */
+h1,h2,h3,h4,h5,h6{
+    /***** faire en sorte que leurs blocks s'ajustent à la taille du texte de sorte à ce que le :hover ne fonctionne pas lorsque l'on survole la ligne mais pas le texte *****/
+    /*****display: inline-block;****/
+    /* sous-ligner les sous-titres */
+    text-decoration: underline rgb(0, 220, 220);
+    /* marges au dessus de chaques sous-titres */
+    margin-top: 1rem;
+    /* marges en dessous de chaques sous-titres */
+    margin-bottom: 0.5rem;
+}
+h1,h2{
+    /* marges au dessus de chaques titres de niveau 1 et 2 */
+    margin-top: 2rem;
+    /* marges en dessous de chaques titres de niveau 1 et 2 */
+    margin-bottom: 0.5rem;    
+}
+/* POLICE POUR LES TITRE h1 */
+/* définir la police que j'ai télécharger */
+@font-face {
+    /* On donne un nom à la police : */
+    font-family: "Ma police de grands titres";
+    /* On indique son emplacement sur le serveur : */
+    src:  url("polices_d_ecriture/electrical.ttf");
+}
+h1 {
+    /***** ajuster la taille de son block à 80% de la largeur de la page *****/
+    /***** display: block; *****/
+    width: 80%;
+    /* équilibre les marges de chaques cotées */
+    margin-left: auto;
+    margin-right: auto;
+    /* marge minimale de gauche et de droite de 20 pixels */
+    max-width: calc(100% - 40px);
+    /* centrer le contenu dans le block */
+    text-align: center;
+    /* désouligner le titre */
+    text-decoration: none;
+    /* mettre un cadre coloré au titre */
+    border-color: rgb(0, 150, 150);
+    /* rendre le cadre visible */
+    border-style: solid;
+    /* mettre un fond bleu-vert semi transparent */
+    background: rgba(0, 150, 150, 0.4);
+    /* mettre ma police d'écriture pour les grand titres */
+    font-family: "Ma police de grands titres", "Times", serif;
+}
+/* modiffier la couleurs des titres losqu'ils sont survolés (TD2 V.3.a)*/
+:is(h1,h2,h3,h4,h5,h6):hover{
+    color: rgb(0, 150, 255);
+}
+
+/* LE TEXTE BASIQUE (les paragraphes) */
+p{
+    /* colorer l'écriture en bleu */
+    color:blue;
+    /* mettre un fond bleu claire */
+    background-color: rgb(220, 255, 255);
+}
+
+/* LIENS */
+/* sachant que les adresse mails et les liens vers une page web externent vont avoir un style définit par la suite
+il ne reste que les liens vers une page web interne à mon site*/
+a[href^='https://'],a[href^='http://']{
+    color: rgb(0, 255, 64);
+}
+/* adresse mail */
+a[href^='mailto:']{
+    color: rgb(0, 255, 255);
+}
+/* liens vers une page web externe à mon site */
+a[href^='https://'],a[href^='http://']{
+    color: rgb(0, 132, 255);
+}
+
+/* CITATIONS (TD2 V.3.b) */
+/* mettre un fond bleu aux citations */
+blockquote,q,blockquote p,q p{
+    background-color: rgb(150, 200, 255); 
+}
+/* ajoutter des guillemets blancs avant et apres chaques citations */
+:is(blockquote>p:first-of-type,q)::before{
+    content: "« ";
+    color:rgb(255, 255, 255)
+}
+:is(blockquote>p:nth-last-of-type(1),q)::after{
+    content: " »";
+    color:rgb(255, 255, 255)
+}
+
+
+
+/* EXTRAITS DE CODE */
+pre>code{
+    /* créer un block (plutot que pleins de blocks qui s'ajustent à la taille de la ligne de texte */
+    display: block;
+    /* mettre une couleure de fond au block */
+    background-color:rgb(150, 200, 200);
+    /* ajoutter une petite marge intérrieure */
+    padding: 1rem;
+    /* arondir légèrment les angles */
+    border-radius: 1rem;
+    /* mettre le texte en caractère de tailles uniformes */
+    font-family: monospace;
+    /* metre une barre de défillement horizontale seulement si cela est nécessaire (si le contenu déborde) */
+    overflow-x: auto;
+}
+
+/* FOOTER */
+footer *{
+    /* ajouter une marge à gauche */
+    margin-left: 2rem;
+    /* ajoutter une marge à droite */
+    margin-right: 2rem;
+    /* supprimer les marge intérrieures */
+    padding: 0px;
+    /* mettre la couleur de fond du pied de page */
+    background-color: rgb(7, 55, 55);
+    /* colorer le texte en blanc */
+    color: white;
+}
+/* former un seul grand block */
+footer{
+    /* ajoutter une metite marge */
+    margin: 1rem;
+    /* arondir les angles */
+    border-radius: 1rem;
+    /* mettre une petite marge intérrieure */
+    padding: 1rem;
+    /* mettre la couleur de fond du pied de page */
+    background-color: rgb(7, 55, 55);
+}

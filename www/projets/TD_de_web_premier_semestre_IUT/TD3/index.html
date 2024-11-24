@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" />
+    <link rel="stylesheet" type="text/css" href="css/barre_de_navigation.css" />
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <title>TD3</title>
+  </head>
+  <!--Corp de la page-->
+  <body>
+    <!--Entête-->
+    <header><h1>TD 3</h1></header>
+    <!--Barre de navigation-->
+    <nav>
+      <ul>
+        <li>
+          <a class="infobulle" href="../TD1/index.html">TD1</a>
+          <ul>
+            <li><a href="../TD1/index.html#URL_et_URI">URL et URI</a></li>
+            <li>
+              <a href="../TD1/index.html#formats_d_immages"
+                >Les différents types de format d'image</a
+              >
+            </li>
+            <li><a href="../TD1/index.html#les_immages">Les immages</a></li>
+            <li><a href="../TD1/index.html#les_liens">Les liens</a></li>
+            <li>
+              <a href="../TD1/index.html#_blank_ou__self"
+                >"_blank" ou "_self"&emsp13;?</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="infobulle" href="../TD2/index.html">TD2</a>
+          <ul>
+            <li><a href="../TD2/index.html#Couleurs">Couleurs</a></li>
+            <li>
+              <a href="../TD2/index.html#Representation_par_arbre"
+                >Representation par arbre</a
+              >
+            </li>
+            <li>
+              <a href="../TD2/index.html#Combinaison_de_selecteurs"
+                >Combinaison de selecteurs</a
+              >
+            </li>
+            <li>
+              <a href="../TD2/index.html#Selecteurs_d_attributs"
+                >Selecteurs d'attributs</a
+              >
+            </li>
+            <li>
+              <a
+                href="../TD2/index.html#Les_pseudo_classes_et_les_pseudo_elements"
+                >Les pseudo-classes/éléments</a
+              >
+            </li>
+            <li>
+              <a href="../TD2/index.html#Regles_de_priporitees"
+                >Regles de prioritées</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="infobulle" href="../TD3/index.html">TD3</a>
+          <ul>
+            <li>
+              <a href="../TD3/index.html#Notion_de_pages">Notion de pages</a>
+            </li>
+            <li><a href="../TD3/index.html#Les_boites">Les boites</a></li>
+            <li><a href="../TD3/index.html#Les_unitees">Les unitées</a></li>
+            <li><a href="../TD3/index.html#gallerie">Gallerie</a></li>
+            <li>
+              <a href="../TD3/index.html#Couches_successives"
+                >Les couches successives</a
+              >
+            </li>
+            <li><a href="../TD3/index.html#Fusion_des_marges">La fusion des marges</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="infobulle" href="../a_propos.html">À propos</a>
+          <ul>
+            <li><a href="../a_propos.html#mon_immage">Mon immage</a></li>
+            <li><a href="../a_propos.html#mon_mail">Mon mail</a></li>
+            <li><a href="../a_propos.html#mes_passions">Mes passions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!--Contenu de la page-->
+    <main>
+      <section id="Notion_de_pages">
+        <h2>Notion de pages</h2>
+        <p>
+          Un traitement de texte privilégie le contrôle apsolu alors qu'un
+          moteur de rendu HTLM privilégie la rapidité (avec un affichage
+          progressif).
+        </p>
+        <p>
+          Par conséquent un traitement classique est plus précis mais un moteur
+          de rendu HTML a une approche plus dynamique et progressive.
+        </p>
+      </section>
+      <section id="Les_boites">
+        <h2>Les boites</h2>
+        <p>
+          Cela ne feras rien car, premièrement il faut définir un style et
+          s'autre part il ne faut qu'une seule épaisseure et une seule couleure.
+        </p>
+      </section>
+      <section id="Les_unitees">
+        <h2>Les unitées</h2>
+        <ul>
+          <li>
+            <p>TAILLE APSOLUE&emsp13;:</p>
+            <p>Cela permette d'évitter les déformations.</p>
+          </li>
+          <li>
+            <p>TAILLE RELATIVE&emsp13;:</p>
+            <p>
+              Cela permette de s'adapter à la taille de la fentre et ainsi
+              evitter les coupures.
+            </p>
+          </li>
+        </ul>
+        <p></p>
+        <p>
+          L'unitée <i>em</i> corespondà la taille de la police de caractère de
+          l'élément.
+        </p>
+        <p>
+          L'unitée <i>rem</i> corespondà la taille de la police de caractère par
+          défaut (c'est à dire de l'élément racine du document).
+        </p>
+        <p></p>
+        <p>
+          L'unitée <i>vh</i> corespondà à 1/100e de la hauteure de la fenêtre.
+        </p>
+        <p>
+          L'unitée <i>vw</i> corespondà à 1/100e de la largeure de la fenêtre.
+        </p>
+      </section>
+      <section id="gallerie">
+        <h2>Lien vers la gallerie</h2>
+        <a href="galerie.html">Galerie</a>
+      </section>
+      <section id="Couches_successives">
+        <h2>Les couches successives</h2>
+        <p>DIV #1 est devant DIV #4 alors que son <i>z-index</i> est plus faible car DIV #4 est un fils de DIV #3 qui a son
+          <i>z-indice</i> plus faible que celui de DIV #1.
+        </p>
+      </section>
+      <section id="Fusion_des_marges">
+        <h2>La fusion des marges</h2>
+        <p>La marge du bas de A est absorbée par son parent.</p>
+      </section>
+      <section>
+        <h2>Himalaya</h2>
+        <a target="_blank" href="himalaya.html">page himalaya</a>
+      </section>
+    </main>
+  </body>
+</html>

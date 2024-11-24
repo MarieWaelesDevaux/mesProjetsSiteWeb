@@ -1,0 +1,108 @@
+/* PARAMETTRE GENERAL de ce tableau (du tableau à reproduire) */
+section:nth-of-type(2)>table{
+    display: inline-block;
+    /* centrer horizontallement le contenue */
+    text-align: center;
+    /* ajoutter une marge en bas du tableau de sorte à ce que le titre (label) du tabeau (qui vas être sorti du flux principal)
+    ne soit pas superpauser avec les élément suivant sdu flux principal */
+    margin-bottom: 3rem;
+    /* definir le tableau comme le parent de référence pour la position des élément qui vont être en position absolu */
+    position: relative;
+}
+
+
+/* ----------------TITRE (LABEL)------------- */
+section:nth-of-type(2)>table>caption{
+    /* sortir le titre du flux principal */
+    position: absolute;
+    /* le positionner (horizontallement) juste en dessous du tableau */
+    top: 100%;
+    /* ajoutter une petite marge au dessus pour na pas qu'il soit coller au tableau non plus */
+    margin-top: 1rem;
+    /* le positionner verticallement au meme endroit que le début du tableau */
+    left: 0px;
+    /* définir sa largeure de la même taille que la largeure du tableu */
+    width: 100%;
+    /* colorer l'écriture en gris */
+    color: gray;
+    /* changer la police d'écriture */
+    font-family: 'Georgia', serif;
+    /* metre toute la police en lettres capitales */
+    font-variant: small-caps;
+}
+
+
+
+/* --------------------PREMIERE LIGNE  (ligne des titres)--------------------*/
+section:nth-of-type(2)>table>thead{
+    /* mettre une couleure de fond */
+    background-color: #F87F70;
+    /* mettre les caractère en gras */
+    font-weight: 600;
+    /* colorer le texte en blanc */
+    color: white;
+}
+/* mettre une petite marge intérrieure à la première ligne (celle des titres) */
+section:nth-of-type(2)>table>thead>tr>th{
+    padding: 0.25rem;
+}
+/* clolorer la première lettre de chacunes de ces cellules (de la première ligne du tableu) */
+section:nth-of-type(2)>table>thead>tr>th::first-letter{
+    color: #FFEBCC;
+}
+
+/* --------------------CONTENU DU TABLEAU (corps du tableau)---------------------- */
+/* definir le style par défaut de toutles ces cellules */
+section:nth-of-type(2)>table>tbody>tr>td{
+    /* definir une marge intérrieure */
+    padding: 0.5rem;
+    /* definir une couleur de fond */
+    background-color: #F8EBD7;
+}
+/* colorer le fond des celules d'une ligne sur deux d'une autre couleure */
+section:nth-of-type(2)>table>tbody>tr:nth-child(2n)>td{
+    background-color: #FFF8DC;
+}
+/* Première lettre de chacunesde cellules du corps de la première collones du tableau */
+section:nth-of-type(2)>table>tbody>tr>td:first-child::first-letter{
+    /* mettre la lettre en gras */
+    font-weight: 600;
+    /* la colorer différament */
+    color: #B22727;
+}
+/* chaques cellules du courps de la première colonne du tableau */
+section:nth-of-type(2)>table>tbody>tr>td:first-child{
+    /* metttre une plus grande marge intérrieure gauche */
+    padding-left: 1.5rem;
+    /* modiffier la police d'écriture */
+    font-family: 'Georgia', serif;
+    /* metre toute la police en lettres capitales */
+    font-variant: small-caps;
+}
+/* aligner le contenu de la deuxième colonne à gauche */
+section:nth-of-type(2)>table>tbody>tr>td:nth-child(1),section:nth-of-type(2)>table>tbody>tr>td:nth-child(2){
+    text-align: left;
+}
+/* ajoutter le logo téléphone avant le contenu (les numéro de telephone) de chaques cellules du coups de la dernière colonne du tableau */
+section:nth-of-type(2)>table>tbody>tr>td:last-child::before{
+    /* colorer le caractère que l'on vas ajoutter de la couleur souhaitée */
+    color: #DEB885;
+    /* mettre le caractère en gras */
+    font-weight: 900;
+    /* ajoutter le caractère */
+    content: "✆ ";
+}
+
+/* ARRONDIR les cellules de chaques coins du tableau */
+section:nth-of-type(2)>table>thead>tr>th:first-child{
+    border-top-left-radius: 1rem;
+}
+section:nth-of-type(2)>table>thead>tr>th:last-child{
+    border-top-right-radius: 1rem;
+}
+section:nth-of-type(2)>table>tbody>tr:last-child>td:first-child{
+    border-bottom-left-radius: 1rem;
+}
+section:nth-of-type(2)>table>tbody>tr:last-child>td:last-child{
+    border-bottom-right-radius: 1rem;
+}

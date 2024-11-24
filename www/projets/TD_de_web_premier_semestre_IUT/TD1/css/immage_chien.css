@@ -1,0 +1,11 @@
+/* IMMAGE DU CHIEN */
+#immage_chien{
+    /* faire floter à gauche */
+    float: right;
+    margin: 0px;
+}
+/* LEGENDE */
+#immage_chien+p{
+    float: right;
+    clear: right;
+}

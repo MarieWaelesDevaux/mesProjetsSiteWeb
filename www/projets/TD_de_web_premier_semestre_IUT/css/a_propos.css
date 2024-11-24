@@ -1,0 +1,35 @@
+/* AVATAR (image) */
+#image_a_propos{
+    display: block;
+    /* équilibre les marges de chaques cotées */
+    margin-left: auto;
+    margin-right: auto;
+    /* arge du dessu et du bas */
+    margin-top: 2px;
+    margin-bottom: 15px;
+    /* arondire les bords */
+    border-radius: 3%;
+    /* afficher une bordure noire */
+    border: 2px solid rgba(0, 0, 0);
+    /* mettre une ombre */
+    box-shadow: 15px 10px 5px rgba(0, 0, 0, 0.425);
+}
+
+/* INFOBULLE */
+.infobulle{
+    position: relative;
+}
+.infobulle>p{
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    background-color: white;
+    color: rgb(40,100,100);
+    padding: 6px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgb(150,255,255), 12px 10px 5px rgba(0, 0, 0, 0.425);
+}
+.infobulle>img:hover+p{
+    display: inline-block;
+}

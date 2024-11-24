@@ -1,0 +1,275 @@
+/* Page Style */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-block-size: 100vh;
+    min-width: 440px;
+    padding: auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url("../images/fond.jpg");
+    background-attachment: fixed;
+    background-size: 100%; 
+}
+
+header {
+    display: inline-block;
+    width: 80%;
+    margin: 4rem auto;
+	margin-bottom: 0;
+    color: rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 6.7rem;
+    margin: 0;
+}
+h1 ~ h1 {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+}
+h2 {
+    display: inline;
+	margin: 0;
+    padding: 0.5rem;
+	font-size: 1.7rem;
+    color: rgba(30,30,30,1);
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: bolder;
+    color: rgba(25, 0, 55, 0.9);
+}
+
+main {
+    margin: 1rem;
+    margin-bottom: 5rem;
+}
+
+#dispositionPrncipale
+
+#dispositionPrncipale, table {
+    margin: 0 auto;
+    border-spacing: 1.8rem;
+}
+
+#dispositionPrncipale, td {
+    width: 35rem;
+    padding: 1rem;
+    font-size: 1rem;
+	color: rgba(85, 0,115);
+    background: radial-gradient(ellipse, rgba(240, 240, 255, 0.9), rgba(255, 230, 240, 0.6));
+    border-radius: 10px;
+    font-weight: bold;
+	font-size: 1.2rem;
+    text-align: center;
+}
+#dispositionPrncipale, td[colspan="2"] {
+    width: 100%;
+    margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 900px) {
+    #dispositionPrncipale {
+        border-spacing: 0;
+    }
+    #dispositionPrncipale td{
+        display: block;
+        width: 100%;
+        margin-bottom: 1.8rem;
+    }
+}
+tr {
+    margin: 5rem;
+}
+
+ul {
+	padding: 0;
+}
+li{
+	margin: 0.2rem;
+	list-style: none;
+}
+
+#surliste>li {
+	font-size: 1.6rem;
+	font-weight: bolder;
+	margin-bottom: 3rem;
+}
+#sousliste>li {
+	font-size: 1.2rem;
+	margin: 0.2rem;
+	font-weight: bold;
+}
+#sousliste>li>p:first-child {
+	font-weight: bolder;
+	font-size: 1.4rem;
+}
+.periode {
+	color: rgba(44, 44, 62, 0.6);
+}
+
+a {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 3%;
+    text-decoration: none;
+    color: rgba(125, 0,145);
+}
+a:hover {
+    color: rgb(153,0,171);
+}
+img {
+    height: 20rem;
+    width: auto;
+    border-radius: 3rem;
+    margin: auto;
+    box-shadow: 1rem 0rem 3rem rgba(0,0,0,0.4);
+    opacity: 0.9;
+    filter: brightness(70%);
+}
+
+a {
+    position: relative;
+}
+img:first-of-type:has(+ img) {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin-right: 10%;
+    margin-bottom: 13%;
+}
+img ~ img {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 90%;
+    height: auto;
+}
+a:hover img{
+    opacity: 1;
+    filter: brightness(100%);
+}
+
+#longue {
+    width : 80%;
+    height: auto;
+}
+
+p{
+    text-align: left;
+    min-height: 1rem;
+    font-weight: lighter;
+    font-size: 1rem;
+    padding: 0 3rem;
+}
+
+table td {
+    background: linear-gradient(120deg, rgba(227, 19, 71, 0.2), rgba(153,0,171, 0.2), rgba(61,0,158, 0.2));
+}
+
+p>a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-style: italic;
+}
+@media screen and (max-width: 1195px) {
+    img {
+        height: 15rem;
+        width: auto;
+    }
+    h1 {
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
+    h1 ~ h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 960px) {
+    img {
+        height: 12rem;
+        width: auto;
+    }
+    h1 {
+        font-size: 4rem;
+        line-height: 4.3rem;
+    }
+    h1 ~ h1 {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    img {
+        width: 80%;
+        max-width: 25rem;
+        height: auto;
+    }
+}
+
+
+
+
+
+/* Footer Style */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+	padding: 1rem;
+	width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+	background: radial-gradient(ellipse, rgba(200,200,200,0.8), rgba(200,200,200,0.6)), linear-gradient(90deg, rgb(227, 19, 71), rgb(153,0,171), rgb(61,0,158));
+	box-shadow: 1rem 0rem 3rem rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+	font-size: 0.8rem;
+}
+
+footer a {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(85, 0,115);
+    margin: 0;
+    padding: 0;
+    width: 10rem;
+}
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+footer img {
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    footer a p{
+        display: none;
+    }
+}

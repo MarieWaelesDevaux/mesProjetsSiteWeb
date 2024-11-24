@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../../css/barre_de_navigation.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/etapes_jouer.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/pied_de_page.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/2883/2883861.png"
+    />
+    <title>JDP, Informations Pratiques</title>
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <nav>
+      <ul>
+        <li>
+          <a href="../../index.html"
+            ><img src="../../img/icon.png" alt="icon"
+          /></a>
+        </li>
+        <li>
+          <a href="../index.html"><h3>Comment Jouer</h3></a>
+          <ul>
+            <li><a href="etape_jouer_1.html">Etape 1</a></li>
+            <li><a href="etape_jouer_2.html">Etape 2</a></li>
+            <li><a href="etape_jouer_3.html">Etape 3</a></li>
+            <li><a href="etape_jouer_4.html">Etape 4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../../conception.html"><h3>Conception</h3></a>
+          <ul>
+            <li>
+              <a href="../../conception.html#Les_difficultees_rencontrees"
+                >Les difficultées rencontrées</a
+              >
+            </li>
+            <li>
+              <a href="../../conception.html#Nos_choix_pour_notre_code"
+                >Nos choix pour notre code</a
+              >
+            </li>
+            <li>
+              <a href="../../conception.html#Diagramme_de_Gantt"
+                >Notre diagrame de Gantt</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="../../page_de_telechargements.html"><h2>Installer</h2></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Entête -->
+    <header>
+      <h1>Comment accéder au jeu&nbsp;?</h1>
+    </header>
+
+    <!-- Corp de la page -->
+    <main>
+      <p>
+        Avant de commencer, il faut savoir que le jeu fonctionne que sur
+        <a href="https://fr.wikipedia.org/wiki/Linux" target="_blank">Linux</a>
+        à cause de la librairie ncurses utilisé pour l'affichage. Néaumoins, il
+        existe une équivalence sous Windows qui adapte le code, la librairie
+        pdcurses.
+      </p>
+
+      <p>
+        Il vous est également possible d'installer sous windows, une machine
+        virtuelle Linux en suivant le
+        <a
+          href="../pdf/installation_de_debian_12_sous_virtualbox_7.pdf"
+          target="_blank"
+          >PDF</a
+        >.
+      </p>
+
+      <p>
+        Nous vous avons mis à disposition les fichiers compressé pour Windows et
+        Linux (il vous suffit de cliquer sur un des boutons "Installer"). Voici
+        les étapes à faire pour lancer le jeu :
+      </p>
+      <ul>
+        <li>
+          Téléchargez le fichier zip correspondant à votre système
+          d'exploitation.
+        </li>
+        <li>Décompressez le.</li>
+        <li>
+          Dans votre terminal, placez vous dans le dossier décompressé (à l'aide
+          de la commande cd).
+        </li>
+        <li>
+          Assurez vous que la taille de votre fenêtre du terminal soit assez
+          grande.
+        </li>
+        <li>
+          Entrez les commandes suivantes&nbsp;:
+          <ul>
+            <li>
+              Sous windows&nbsp;:
+              <pre><code>
+ .\jdp.exe
+              </code></pre>
+            </li>
+            <li>
+              Sous Linux&nbsp;:
+              <pre><code>
+ chmod +x jdp
+ ./jdp
+              </code></pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>Pour comprendre les règles du jeu...</p>
+
+      <a href="etape_jouer_2.html" id="Bouton">
+        <p>Etape 2</p>
+        <p>Comment jouer au jeu</p>
+      </a>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+      <h2>Contactez Nous</h2>
+      <h3>Retrouvez nos mails étudiants</h3>
+      <ul>
+        <li>
+          <a href="mailto:marie.waeles--devaux@etu.univ-cotedazur.fr"
+            >marie.waeles--devaux&#64;etu.univ-cotedazur.fr</a
+          >
+        </li>
+        <li>
+          <a href="mailto:skander.souissi@etu.univ-cotedazur.fr"
+            >skander.souissi&#64;etu.univ-cotedazur.fr</a
+          >
+        </li>
+        <li>
+          <a href="mailto:samuel.roy@etu.univ-cotedazur.fr"
+            >samuel.roy&#64;etu.univ-cotedazur.fr</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

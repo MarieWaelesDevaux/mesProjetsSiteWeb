@@ -1,0 +1,78 @@
+/**************FOND*************/
+
+/* -------CIEL et ROUTE-------- */
+main{
+    padding: 5vw 20vw;
+    padding-bottom: 18vw;
+    background: linear-gradient(rgb(225,232,242), rgb(225,232,242) 66%, rgb(128,128,128) 66%, rgb(128,128,128));
+}
+/* -------BANDE BLANCHE DE LA ROUTE----- */
+footer{
+    position: relative;
+    top: -6vw;
+    left: 0;
+    height: 1vw;
+    background: linear-gradient(90deg, transparent, transparent 50%, white 51%, white);
+    background-size: 6.25% 100%;
+}
+
+
+
+
+/*************VOITURE***************/
+
+/* ---------HAUT---------- */
+/* CAPOT et VITTRES */
+#haut{
+    width: 40vw;
+    height: 10vw;
+    margin-left: 5vw;
+    border: 0.8vw solid rgb(242,6,6);
+    border-right: none;
+    background: linear-gradient(135deg, rgb(0,0,130), rgb(0,0,4));
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+    transform: skew(8deg, 0);
+    display: flex;
+}
+/* SEPARATION DES VITRES*/
+#haut>div{
+    margin: 0 9vw;
+    width: 2vw;
+    height: 10vw;
+    background-color: rgb(242,6,6);
+}
+
+/* ---------BAS---------- */
+#bas{
+    width: 60vw;
+    height: 12vw;
+    margin-left: 0;
+    background: linear-gradient(rgb(242,6,6), rgb(176,49,49) 15%, rgb(255,246,202) 26%, rgb(255,210,15) 30%, rgb(242,6,6) 38%, rgb(176,49,49));
+    border-radius: 1vw;
+    border-bottom-right-radius: 2vw;
+    border-top-left-radius: 3vw;
+    border-top-right-radius: 8vw;
+}
+
+/* ---------ROUES---------- */
+#voiture{
+    position: relative;
+}
+.roue{
+    position: absolute;
+    top: 80%;
+    padding: 1.3vw 2.2vw;
+    border-radius: 50%;
+    background-color: rgb(240,155,0);
+    border: 1.8vw solid black;
+    font-size: 4vw;
+    font-weight: 400;
+}
+#r1{
+    left: 10%;
+}
+#r2{
+    left: 80%;
+}
+

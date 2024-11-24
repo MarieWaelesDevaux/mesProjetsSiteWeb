@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" />
+    <link rel="stylesheet" type="text/css" href="css/TD4_formulaire.css" />
+    <link rel="stylesheet" type="text/css" href="css/TD4_tableau.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/TD4_tableau_avec_cases_fusionnees.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/TD4.css" />
+    <link rel="icon" href="../img/logo.png" type="image/x-icon" />
+    <title>TD4</title>
+  </head>
+  <!--Corp de la page-->
+  <body>
+    <!--Entête-->
+    <header>
+      <h1>TD 4</h1>
+    </header>
+    <!--Contenu de la page-->
+    <main>
+      <section>
+        <h2>Formulaire</h2>
+        <form>
+          <fieldset>
+            <label for="nom"
+              >NOM<abbr title="Champ obligatoire">(*)</abbr></label
+            >
+            <input id="nom" type="text" required />
+          </fieldset>
+          <fieldset>
+            <label for="courriel"
+              >COURRIEL<abbr title="Champ obligatoire">(*)</abbr></label
+            >
+            <input id="courriel" type="email" required />
+          </fieldset>
+          <fieldset>
+            <label for="site_web">SITE WEB</label>
+            <input id="site_web" type="url" />
+          </fieldset>
+          <fieldset>
+            <label for="satisfaction">
+              SATISFACTION<abbr title="Champ obligatoire">(*)</abbr>
+            </label>
+            <sup>-</sup><input id="satisfaction" type="range" /><sup>+</sup>
+          </fieldset>
+          <fieldset>
+            <label for="commentaire">
+              COMMENTAIRE<abbr title="Champ obligatoire">(*)</abbr>
+            </label>
+            <textarea id="commentaire" rows="6" required></textarea>
+          </fieldset>
+          <fieldset>
+            <button type="submit">Poster un commentaire</button>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <h2>Tableau</h2>
+        <table>
+          <!-- Légende -->
+          <caption>
+            Annuaire des membres
+          </caption>
+          <!-- Entête -->
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Date de naissance</th>
+              <th>Téléphone</th>
+            </tr>
+          </thead>
+          <!-- Corps du tableau -->
+          <tbody>
+            <tr>
+              <td>Martin</td>
+              <td>Louis</td>
+              <td>05/12/1960</td>
+              <td>0610234578</td>
+            </tr>
+            <tr>
+              <td>Le Douec</td>
+              <td>Julie</td>
+              <td>18/05/1975</td>
+              <td>0610247013</td>
+            </tr>
+            <tr>
+              <td>Jolivet</td>
+              <td>Leo</td>
+              <td>01/03/1982</td>
+              <td>0745516021</td>
+            </tr>
+            <tr>
+              <td>Merzougui</td>
+              <td>Aïssa</td>
+              <td>23/02/1962</td>
+              <td>0685417844</td>
+            </tr>
+            <tr>
+              <td>Pinto</td>
+              <td>Jose</td>
+              <td>18/11/1976</td>
+              <td>0647814102</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Les pseudo-classes first et last</h2>
+        <ol>
+          <li>
+            <p>
+              Les pseudo-classes <i>:first-child</i>, <i>:last-child</i> et
+              <i>:ntch-child()</i> selectionnent des éléments par rapport à leur
+              position au sein de leur parent quelque soit leur types.
+            </p>
+            <p>
+              Les pseudo-classes <i>:first-of-type</i>, <i>:last-of-type</i> et
+              <i>:nth-of-type()</i> selectionnent des élément par rappost à leur
+              position parmi les occurences du même type.
+            </p>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <p>
+                  Le <i>li ul:first-of-type {color: red;}</i> coloreraient en
+                  rouge :
+                </p>
+                <blockquote>
+                  <p>arrêter le Joker ;</p>
+                  <p>sauver le monde ;</p>
+                  <p>racheter du dentifrice.</p>
+                </blockquote>
+              </li>
+              <li>
+                <p>
+                  Tandisque <i>li ul:first-child {color: red;}</i> ne feras rien
+                  car le selecteur <i>:first-child</i> selectionne le premier
+                  enfant de <i>li</i> de type <i>ul</i>, or le premier enfant de
+                  <i>li</i> est du texte dont n'est pas de type ul.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+      <section id="fusion">
+        <h2>Fusions de cellules d'un tableau</h2>
+        <table>
+          <caption>
+            tableau identique
+          </caption>
+          <tbody>
+            <tr>
+              <td class="bleu" colspan="3">300x50</td>
+              <td class="rouge" rowspan="4">100x200</td>
+            </tr>
+            <tr>
+              <td class="rose" rowspan="2" colspan="2">200x100</td>
+              <td class="vert">100x50</td>
+            </tr>
+            <tr>
+              <td class="jaune">100x50</td>
+            </tr>
+            <tr>
+              <td class="orange" rowspan="2">100x100</td>
+              <td class="gris" rowspan="2" colspan="2">200x100</td>
+            </tr>
+            <tr>
+              <td class="violet">100x50</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Vidéo</h2>
+        <video
+          controls
+          poster="img/poster_de_la_video.png"
+          src="img/video.mp4.mp4"
+        ></video>
+      </section>
+      <section>
+        <h2>Immage sectorisée</h2>
+        <img
+          src="img/carte_IUT.png"
+          usemap="#image-map"
+          alt="Carte de l'I.u.t."
+        />
+        <map name="image-map">
+          <area
+            target="_blank"
+            alt="TC"
+            title="TC"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/techniques-de-commercialisation-nice/le-departement"
+            coords="599,212,685,252,619,391,537,352"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="Cafétaria Crous"
+            title="Cafétaria Crous"
+            href="https://www.crous-nice.fr/restaurant/cafeteria-iut/?lang=fr"
+            coords="468,625,513,556,653,649,608,718"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="GEII"
+            title="GEII"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/genie-electrique-et-informatique-industrielle/le-departement"
+            coords="722,310,687,385,911,490,879,557,756,501,720,578,841,634,853,610,915,638,998,463,941,435,950,414"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="GEA"
+            title="GEA"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/gestion-des-entreprises-et-des-administrations/le-departement"
+            coords="383,506,295,467,406,222,494,260"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="INFO"
+            title="INFO"
+            href="https://iut.univ-cotedazur.fr/departements-et-formations/informatique/le-departement"
+            coords="175,321,255,359,180,522,100,485"
+            shape="poly"
+          />
+        </map>
+      </section>
+    </main>
+  </body>
+</html>

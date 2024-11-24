@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/td.css" />
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <title>TD2</title>
+  </head>
+  <!--Corp de la page-->
+  <body>
+    <!--Entête-->
+    <header><h1>TD 2</h1></header>
+    <!--Contenu de la page-->
+    <main>
+      <section id="Couleurs">
+        <h2>Couleurs</h2>
+        <ol>
+          <li>
+            <p>rgb(120, 56, 13) correpond à #28c862 en hexadécimal.</p>
+          </li>
+          <li>
+            <p>Les deux méthodes rgb et hexa nous permettent d'optenir&emsp13;:</p>
+            <p>
+              (16²-1)<sup>3</sup> = 255<sup>3</sup> = 16581375 couleures
+              différentes
+            </p>
+            <p>
+              La méthode des noms de couleurs nous permet quant à elle d'optenir
+              140 couleures différentes pour les navigateurs modernes
+            </p>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <p>RGB</p>
+                <p>
+                  La méthode rgb est plus lisible pour un humain mais n'est pas
+                  très compacte
+                </p>
+              </li>
+              <li>
+                <p>HEXADECIMAL</p>
+                <p>
+                  La méthode hexadécimal est plus compacte mais légèrement moins
+                  compréhensible pour un hummain
+                </p>
+              </li>
+              <li>
+                <p>NOM DE COULEURES</p>
+                <p>
+                  La méthode des noms de couleurs est très simple à ituliser
+                  pour les couleures de base mais permette des variation de
+                  couleures très limitées (il exixte beaucoup moins de couleures
+                  possible), et il faut connaitre les appelation des couleures
+                  que l'on souhaite ituliser.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+      <section id="Representation_par_arbre">
+        <h2>Représentation par arbre</h2>
+        <ol>
+          <li>
+            Cette arbre a&emsp13;:
+            <ul>
+              <li>16 noeuds de types ELEMENT.</li>
+              <li>13 noeuds de types TEXT.</li>
+            </ul>
+          </li>
+          <li>
+            <pre><code>
+&#x3C;body&#x3E;
+  &#x3C;header&#x3E;
+      &#x3C;h1&#x3E;Les papous&#x3C;/h1&#x3E;
+  &#x3C;/header&#x3E;
+  &#x3C;main&#x3E;
+    &#x3C;section&#x3E;
+      &#x3C;h2&#x3E;D&#xE9;finition&#x3C;/h2&#x3E;
+      &#x3C;p&#x3E;Les &#x3C;em&#x3E;papous&#x3C;/em&#x3E; sont les habitants de Papouasie&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;section&#x3E;
+      &#x3C;h2&#x3E;Classification&#x3C;/h2&#x3E;
+      &#x3C;ul&#x3E;
+        &#x3C;li&#x3E;Les papous papa.&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;Les papous pas papa.&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+    &#x3C;/section&#x3E;
+  &#x3C;/main&#x3E;
+  &#x3C;footer&#x3E;
+    Site r&#xE9;alis&#xE9; par &#x3C;i&#x3E;C. Levi-Strauss&#x3C;/i&#x3E; en partenariat avec &#x3C;i&#x3E;A. Franquin&#x3C;/i&#x3E;.
+  &#x3C;/footer&#x3E;
+&#x3C;/body&#x3E;
+            </code></pre>
+          </li>
+        </ol>
+      </section>
+      <h2>Code CSS&emsp13;: Sélécteurs avancés</h2>
+      <section id="Combinaison_de_selecteurs">
+        <h3>Combinaison de selecteurs</h3>
+        <pre><code>
+/* Seullement &#x22;ch&#xE2;taignes&#x22; avec un fond rouge&#x22; */
+ul&#x3E;li&#x3E;ul&#x3E;li&#x3E;li&#x3E;li&#x3E;li&#x3E;em{
+    background-color: red;
+}
+
+/* Seullement &#x22;couveerture&#x22; avec un fond cyan&#x22; */
+ul&#x3E;li&#x3E;li&#x3E;em{
+    background-color: cyan;
+}
+        </code></pre>
+      </section>
+      <section id="Selecteurs_d_attributs">
+        <h3>Sélécteurs d'attributs</h3>
+        <pre><code>
+/* liens */
+/* sachant quee les adresse mails et les liens vers une page web externent vont avoir un style d&#xE9;finit par la suite
+il ne reste que les liens vers une page web interne &#xE0; mon site*/
+a[href^=&#x27;https://&#x27;],a[href^=&#x27;http://&#x27;]{
+    color: rgb(0, 255, 64);
+}
+/* adresse mail */
+a[href^=&#x27;mailto:&#x27;]{
+    color: rgb(0, 255, 255);
+}
+/* liens vers une page web externe &#xE0; mon site */
+a[href^=&#x27;https://&#x27;],a[href^=&#x27;http://&#x27;]{
+    color: rgb(0, 132, 255);
+}
+        </code></pre>
+      </section>
+      <section id="Les_pseudo_classes_et_les_pseudo_elements">
+        <h3>Les pseudo-classes et les pseudo-éléments</h3>
+        <pre><code>
+/* modiffier la couleurs des ites losqu&#x27;ils sont survol&#xE9;s */
+:is(h1,h2,h3,h4,h5,h6):hover{
+    color: rgb(153, 0, 0);
+}
+        </code></pre>
+        <ul>
+          <li>
+            <p>p:hover</p>
+            <p>
+              selectionne l'élément p quand il est survolé et agit sur ce même
+              élément p.
+            </p>
+          </li>
+          <li>
+            <p>p&emsp13;:hover</p>
+            <p>
+              selectionne les descendants de p lorsqu'ils sont séléctionnés et
+              agit sur le déscendant survolé de p.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section id="Regles_de_priporitees">
+        <h2>Regles de prioritées</h2>
+        <ol>
+          <li>
+            <ul>
+              <li>
+                <q>Ceci est un paragraphe </q> et <q>.</q> seront de couleure violet.
+              </li>
+              <li>
+                <q>Ma page</q> et <q>assez remarquable</q> seront de couleure marron.
+              </li>
+              <li>
+                <q>Et que dire de celui-ci&emsp13;?</q> sera de couleure bleu.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ol>
+              <li>
+                <ul>
+                  <li>*&emsp13;: (0,0,0)</li>
+                  <li>body&emsp13;: (0,0,1)</li>
+                  <li>#intro&emsp13;: (1,0,0)</li>
+                  <li>p&emsp13;: (0,0,1)</li>
+                  <li>p.important&emsp13;: (0,1,1)</li>
+                  <li>body&emsp13;: (0,1,1)</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <q>Ma page</q>
+                    <p>
+                      Hérite de l'élément h1 qui hérite de l'élément body mais
+                      le selecteur * le concerne directement.
+                    </p>
+                  </li>
+                  <li>
+                    <q>Ceci est un paragraphe</q>
+                    <p>
+                      Hérite de l'élément p qui hérite de l'élément body, mais
+                      les selecteur #intro, p.important et body .important le
+                      concerne directement (avcec #intro prioritaire).
+                    </p>
+                  </li>
+                  <li>
+                    <q>assez remarquable</q>
+                    <p>
+                      Hérite de l'élément em qui hérite de l'élément p, mais le
+                      selecteur * le concerne directement.
+                    </p>
+                  </li>
+                  <li>
+                    <q>.</q>
+                    <p>
+                      Hérite de l'élément p qui hérite de l'élément body, mais
+                      les selecteur #intro, p.important et body .important le
+                      concerne directement (avcec #intro prioritaire).
+                    </p>
+                  </li>
+                  <li>
+                    <q>Et que dire de celui-ci&emsp13;?</q>
+                    <p>
+                      Hérite de l'élément p qui hérite de l'élément body, mais
+                      les selecteur p.important et body .important le concerne
+                      directement (avcec body .important prioritaire car il
+                      écrase le style de p.important avec l'ordre du code CSS).
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
