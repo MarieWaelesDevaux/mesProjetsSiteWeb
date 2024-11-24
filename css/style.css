@@ -44,6 +44,7 @@ h3 {
 	font-size: 1.5em;
 	font-weight: bolder;
     color: rgba(25, 0, 55, 0.9);
+    max-width: 100%;
 }
 
 main {
@@ -51,16 +52,14 @@ main {
     margin-bottom: 5rem;
 }
 
-#dispositionPrncipale
-
 #dispositionPrncipale, table {
     margin: 0 auto;
-    border-spacing: 1.8rem;
+    border-spacing: 1rem;
 }
 
 #dispositionPrncipale, td {
     width: 35rem;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1rem;
 	color: rgba(85, 0,115);
     background: radial-gradient(ellipse, rgba(240, 240, 255, 0.9), rgba(255, 230, 240, 0.6));
@@ -71,7 +70,6 @@ main {
 }
 #dispositionPrncipale, td[colspan="2"] {
     width: 100%;
-    margin-bottom: 8rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -81,7 +79,6 @@ main {
     #dispositionPrncipale td{
         display: block;
         width: 100%;
-        margin-bottom: 1.8rem;
     }
 }
 tr {
