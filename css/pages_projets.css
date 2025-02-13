@@ -1,6 +1,7 @@
 #dispositionPrncipale {
     display: inline-flex;
     padding: 3%;
+    gap: 1rem;
 }
 #description, #lien_immage{
     flex: 3; 
